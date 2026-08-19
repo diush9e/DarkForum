@@ -199,7 +199,7 @@ export default function EditProfilePage() {
               />
             ) : (
               <span className="text-4xl font-bold text-primary">
-                {session?.user?.username?.[0]?.toUpperCase() || "U"}
+                {(session?.user as any)?.username?.[0]?.toUpperCase() || "U"}
               </span>
             )}
 
