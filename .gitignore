@@ -1,0 +1,10 @@
+/node_modules
+/.next
+/out
+/.pnp
+.pnp.js
+.DS_Store
+*.pem
+.env
+.env.local
+prisma/*.db
