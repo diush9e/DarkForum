@@ -12,7 +12,7 @@ export default function Navbar() {
             <Link href="/" className="hover:text-primary transition">الرئيسية</Link>
             <Link href="/posts" className="hover:text-primary transition">المواضيع</Link>
             {session ? (
-              <>{<Link href="/messages" className="hover:text-primary transition">الرسائل</Link>}<Link href={`/profile/${session.user?.username}`} className="hover:text-primary transition">بروفايلي</Link><button onClick={() => signOut()} className="bg-dark-300 hover:bg-dark-400 px-4 py-2 rounded-lg transition">خروج</button></>
+              <>{<Link href="/messages" className="hover:text-primary transition">الرسائل</Link>}<Link href={`/profile/${session.user?.name || 'user'}`} className="hover:text-primary transition">بروفايلي</Link><button onClick={() => signOut()} className="bg-dark-300 hover:bg-dark-400 px-4 py-2 rounded-lg transition">خروج</button></>
             ) : (
               <><Link href="/auth/login" className="hover:text-primary transition">دخول</Link><Link href="/auth/register" className="bg-primary hover:bg-primary-hover text-white px-6 py-2 rounded-lg transition">تسجيل</Link></>
             )}
