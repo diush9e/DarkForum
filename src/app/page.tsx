@@ -1,11 +1,17 @@
- 
-import UploadButton from '@/components/UploadButton';
-
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-8">
-      <h1 className="text-2xl font-bold mb-4">رفع الملفات</h1>
-      <UploadButton />
-    </main>
+    <div style={{
+      minHeight: '100vh',
+      background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)',
+      color: '#fff',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: '20px',
+    }}>
+      <h1 style={{ fontSize: '2.5rem', marginBottom: '10px' }}>Dark Forum</h1>
+      <p style={{ fontSize: '1.2rem', color: '#a0a0a0' }}>Coming soon...</p>
+    </div>
   );
 }
