@@ -34,7 +34,7 @@ export const { handlers: { GET, POST }, auth, signIn, signOut } = NextAuth({
       return session;
     },
     async jwt({ token, user }) {
-      if (user) { token.id = user.id; token.username = user.username; }
+      if (user) { token.id = user.id; token.username = (user as any).username; }
       return token;
     },
   },
